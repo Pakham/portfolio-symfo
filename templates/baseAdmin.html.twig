@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="portfolio" />
+    <meta name="author" content="Pakham" />
+
+    <title>Portfolio - admin - {% block title %}{% endblock %}</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{{ asset('css/styleAdmin.css') }}" />
+
+    {% block stylesheets %}{% endblock %}
+  </head>
+  <body>
+    <header class="container-fluid bg-dark text-center text-light p-3">
+      <h2>portfolio - espace administrateur</h2>
+    </header>
+    {% block body %} {% endblock %}
+    <footer class="container-fluid bg-dark text-center text-light">
+      <p>copyright Pakham</p>
+    </footer>
+  </body>
+</html>
