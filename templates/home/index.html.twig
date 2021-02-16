@@ -1,0 +1,40 @@
+{% block title %}Home{% endblock %} {% block body %}
+<header>
+  <div class="nav-header">
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h4 class="text-white">Menu</h4>
+          <ul>
+            <li><a href="">Projets</a></li>
+            <li><a href="">Compétences</a></li>
+            <li><a href="">A propos</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <nav class="navbar navbar-light">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarToggleExternalContent"
+          aria-controls="navbarToggleExternalContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
+    <div>
+      <h1 class="logo">Pakham</h1>
+      <p class="sous-logo">Développeur web et web mobile</p>
+    </div>
+  </div>
+  <div class="connect">
+    <a href="">Vous connecter</a>
+  </div>
+</header>
+
+{% endblock %} {% extends 'base.html.twig' %}
