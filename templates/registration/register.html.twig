@@ -3,15 +3,25 @@ body %} {% for flashError in app.flashes('verify_email_error') %}
 <div class="alert alert-danger" role="alert">{{ flashError }}</div>
 {% endfor %}
 
-<h1>Register</h1>
+<h2 class="title-reg">S'inscrire</h2>
 
-{{ form_start(registrationForm) }}
-{{ form_row(registrationForm.email) }}
-{{
-  form_row(registrationForm.plainPassword, {
-    label: "Password"
-  })
-}}
+<main class="container-fluid p-5">
+  {% for flashError in app.flashes('verify_email_error') %}
+  <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+  {% endfor %}
 
-{{ form_end(registrationForm) }}
+  <div class="col-4 offset-4">
+    <h2 class="text-center">Inscription</h2>
+
+    {{ form_start(registrationForm) }}
+    {{ form_row(registrationForm.email) }}
+    {{ form_row(registrationForm.plainPassword) }}
+    <div class="text-right">
+      {{ form_row(registrationForm.valider) }}
+    </div>
+    {{ form_end(registrationForm) }}
+
+    <div class="dropdown-divider my-3"></div>
+  </div>
+</main>
 {% endblock %}

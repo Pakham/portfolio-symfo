@@ -74,3 +74,11 @@ header {
   text-decoration: none;
   color: rgb(158, 132, 17);
 }
+form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.title-reg {
+  color: white;
+}
